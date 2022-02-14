@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import axios from "axios";
 import { setProducts } from "../redux/actions/productActions";
 import ProductComponent from "./ProductComponent";
@@ -16,6 +16,7 @@ const ProductListing = () => {
 
   useEffect(() => {
     fetchProducts();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <div className="ui grid container">

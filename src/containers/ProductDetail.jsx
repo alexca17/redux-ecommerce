@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
@@ -28,6 +30,7 @@ const ProductDetail = () => {
     return () => {
       dispatch(removeSelectedProduct());
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [productId]);
 
   return (
